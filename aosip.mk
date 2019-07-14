@@ -24,9 +24,15 @@ $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 # Inherit some common AOSiP stuff.
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
-# Maintainer Prop
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="David Sn"
+# GApps
+$(call inherit-product-if-exists, vendor/gapps/config.mk)
+
+# PixelStyle
+$(call inherit-product-if-exists, vendor/pixelstyle/config.mk)
+
+# GApps targets
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
 
 PRODUCT_NAME := aosip_cheeseburger
 PRODUCT_DEVICE := cheeseburger
