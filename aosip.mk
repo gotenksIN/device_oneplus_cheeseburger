@@ -36,6 +36,9 @@ include vendor/aosip/config/ambientsense.mk
 # GApps targets
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_MINIMAL_APPS := false
+TARGET_INCLUDE_STOCK_ARCORE := true
 
 PRODUCT_NAME := aosip_cheeseburger
 PRODUCT_DEVICE := cheeseburger
